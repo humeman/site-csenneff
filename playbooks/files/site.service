@@ -1,0 +1,16 @@
+[Unit]
+Description=Runs {{ site_name }}.
+After=syslog.target network.target remote-fs.target nss-lookup.target
+OnFailure=notifier@%i.service
+
+[Service]
+Type=exec
+User={{ site_name }}
+Group={{ site_name }}
+ExecStart=/bin/bash /scripts/{{ site_name }}/start.sh
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier={{ site_name }}
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,30 @@
+
+/* PRIMARY CONTAINER */
+div.container1 {
+    /* LAYOUT */
+    display: flex;
+    flex-direction: column;
+    
+    /* BACKGROUND */
+    border-radius: var(--border-radius);
+    background-color: var(--background-2);
+
+    /* SPACING */
+    margin: var(--padding-m);
+}
+
+div.container2 {
+    /* LAYOUT */
+    display: flex;
+    flex-direction: column;
+    
+    /* BACKGROUND */
+    border-radius: var(--border-radius);
+    background-color: var(--background-3);
+}
+
+/* COLOR OVERLAY */
+div.scanlines {
+    background-image: url("/img/bg-scanlines.png");
+    background-repeat: repeat;
+}

@@ -1,0 +1,26 @@
+- name: Execute templated script mysql.sh
+  ansible.builtin.command: /bin/bash /scripts/{{ site_name }}/mysql.sh
+  become: true
+  
+- name: Execute templated script deploy.sh
+  ansible.builtin.shell: /scripts/{{ site_name }}/deploy.sh 
+  become: true
+  become_user: "{{ site_name }}"
+
+- name: Restart and enable {{ site_name }} systemd service
+  ansible.builtin.systemd:
+    name: "{{ site_name }}.service"
+    state: restarted
+    scope: system
+    enabled: true
+    no_block: true
+  become: true
+
+- name: Restart and enable {{ site_name }}-api systemd service
+  ansible.builtin.systemd:
+    name: "{{ site_name }}-api.service"
+    state: restarted
+    scope: system
+    enabled: true
+    no_block: true
+  become: true

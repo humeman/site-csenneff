@@ -1,0 +1,6 @@
+- name: Add UFW rule @ port {{ api_port }} for API
+  community.general.ufw:
+    rule: allow
+    port: "{{ api_port }}"
+    comment: Allow {{ site_name }} connections
+  become: true

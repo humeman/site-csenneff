@@ -1,0 +1,33 @@
+- name: Create {{ site_name }} systemd service
+  ansible.builtin.template:
+    src: ../files/site.service
+    dest: /etc/systemd/system/{{ site_name }}.service
+    owner: root
+    group: root
+  become: true
+  register: systemd_conf
+
+- name: Validate {{ site_name }} systemd service
+  ansible.builtin.command: systemd-analyze verify /etc/systemd/system/{{ site_name }}.service
+  become: true
+  when: systemd_conf.changed
+
+- name: Create {{ site_name }}-api systemd service
+  ansible.builtin.template:
+    src: ../files/api.service
+    dest: /etc/systemd/system/{{ site_name }}-api.service
+    owner: root
+    group: root
+  become: true
+  register: systemd_conf
+
+- name: Validate {{ site_name }}-api systemd service
+  ansible.builtin.command: systemd-analyze verify /etc/systemd/system/{{ site_name }}-api.service
+  become: true
+  when: systemd_conf.changed
+
+- name: Reload systemd daemon
+  ansible.builtin.systemd:
+    daemon_reload: true
+  become: true
+  when: systemd_conf.changed

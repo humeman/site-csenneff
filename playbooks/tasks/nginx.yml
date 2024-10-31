@@ -1,0 +1,164 @@
+- name: Set up Let's Encrypt for {{ site_host }}
+  include_tasks: "certbot.yml"
+  vars:
+    certbot_domain: "{{ site_host }}"
+    certbot_email: "{{ email_address }}"
+    certbot_flags: ""
+
+- name: Set up Let's Encrypt for {{ site_host }} aliases
+  include_tasks: "certbot.yml"
+  vars:
+    certbot_email: "{{ email_address }}"
+    certbot_flags: ""
+  loop: "{{ aliases }}"
+  loop_control:
+    loop_var: certbot_domain
+
+- name: Set up Let's Encrypt for {{ cdn_host }}
+  include_tasks: "certbot.yml"
+  vars:
+    certbot_domain: "{{ cdn_host }}"
+    certbot_email: "{{ email_address }}"
+    certbot_flags: ""
+
+- name: Create webroot
+  ansible.builtin.file:
+    path: /var/www/{{ site_name }}
+    mode: "0755"
+    owner: "{{ site_name }}"
+    group: "{{ site_name }}"
+    state: directory
+  become: true
+
+- name: Create repo directory
+  ansible.builtin.file:
+    path: /var/www/{{ site_name }}/repo
+    mode: "0755"
+    owner: "{{ site_name }}"
+    group: "{{ site_name }}"
+    state: directory
+  become: true
+
+- name: Create CDN directory
+  ansible.builtin.file:
+    path: /var/www/{{ site_name }}/cdn
+    mode: "0755"
+    owner: "{{ site_name }}"
+    group: "{{ site_name }}"
+    state: directory
+  become: true
+
+- name: Create CDN/images directory
+  ansible.builtin.file:
+    path: /var/www/{{ site_name }}/cdn/images
+    mode: "0755"
+    owner: "{{ site_name }}"
+    group: "{{ site_name }}"
+    state: directory
+  become: true
+
+- name: Create nginx site file
+  ansible.builtin.template:
+    src: ../files/nginx
+    dest: /etc/nginx/sites-available/{{ site_name }}
+    owner: root
+    group: root
+    mode: "0744"
+  become: true
+  register: nginx_site
+
+- name: Stat nginx site symlink
+  ansible.builtin.stat: 
+    path: /etc/nginx/sites-enabled/{{ site_name }}
+  become: true
+  register: nginx_site_stat
+
+- name: Create symlink for nginx site
+  ansible.builtin.file:
+    src: /etc/nginx/sites-available/{{ site_name }}
+    dest: /etc/nginx/sites-enabled/{{ site_name }}
+    owner: root
+    group: root
+    mode: "0744"
+    state: link
+  become: true
+  when: not nginx_site_stat.stat.exists
+
+- name: Create nginx CDN site file
+  ansible.builtin.template:
+    src: ../files/nginx_cdn
+    dest: /etc/nginx/sites-available/{{ site_name }}-cdn
+    owner: root
+    group: root
+    mode: "0744"
+  become: true
+  register: nginx_cdn_site
+
+- name: Stat nginx CDN site symlink
+  ansible.builtin.stat: 
+    path: /etc/nginx/sites-enabled/{{ site_name }}-cdn
+  become: true
+  register: nginx_cdn_site_stat
+
+- name: Create symlink for nginx CDN site
+  ansible.builtin.file:
+    src: /etc/nginx/sites-available/{{ site_name }}-cdn
+    dest: /etc/nginx/sites-enabled/{{ site_name }}-cdn
+    owner: root
+    group: root
+    mode: "0744"
+    state: link
+  become: true
+  when: not nginx_cdn_site_stat.stat.exists
+
+- name: Verify nginx site files
+  ansible.builtin.command: nginx -t
+  become: true
+  when: nginx_site.changed or nginx_cdn_site.changed
+
+- name: Restart nginx
+  ansible.builtin.systemd:
+    name: nginx.service
+    state: restarted
+    scope: system
+    enabled: true
+  become: true
+  when: nginx_site.changed or nginx_cdn_site.changed
+
+- name: Grant user {{ site_name }} certificate read access
+  ansible.posix.acl:
+    path: /etc/letsencrypt/live
+    entity: "{{ site_name }}"
+    etype: user
+    permissions: rx
+    state: present
+  become: true
+
+- name: Grant user {{ site_name }} certificate read access
+  ansible.posix.acl:
+    path: /etc/letsencrypt/live/{{ site_host }}
+    entity: "{{ site_name }}"
+    etype: user
+    recursive: true
+    permissions: rx
+    state: present
+  become: true
+
+- name: Grant user {{ site_name }} certificate read access
+  ansible.posix.acl:
+    path: /etc/letsencrypt/archive
+    entity: "{{ site_name }}"
+    etype: user
+    permissions: rx
+    state: present
+  become: true
+
+- name: Grant user {{ site_name }} certificate read access
+  ansible.posix.acl:
+    path: /etc/letsencrypt/archive/{{ site_host }}
+    entity: "{{ site_name }}"
+    etype: user
+    recursive: true
+    permissions: rx
+    state: present
+  become: true

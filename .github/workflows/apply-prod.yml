@@ -1,0 +1,28 @@
+name: Apply Latest to Prod
+
+on:
+  workflow_dispatch: {}
+
+env:
+  SECRETS_PROD: ${{ secrets.PROD }}
+  
+  AUTH_GCLOUD: "1"
+  IS_CI: "1"
+  SCRIPT_PATH: "main/ci/scripts"
+  REPO_PATH: "main"
+  REPO_NAME: "site-tecktip"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main
+      - name: Prepare to run Ansible
+        run: . main/ci/scripts/prep.sh
+      - name: Execute Ansible playbook (PROD)
+        run: . main/ci/scripts/ansible-execute.sh PROD

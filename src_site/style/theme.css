@@ -1,0 +1,35 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-1: #010305;
+        --background-2: #03090f;
+        --background-3: #050e18;
+        --primary-1: #bbddff;
+        --primary-2: #97b8da;
+        --primary-3: #7c9dbe;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background-1: #bbddff;
+        --background-2: #86a9cc;
+        --background-2: #6686a7;
+        --primary-1: #000;
+        --primary-2: #111;
+        --primary-3: #222;
+    }
+}
+
+:root {
+    --font-title: 3vw "Workbench", monospace;
+    --font-paragraph: 1vw "DM Mono", monospace;
+
+    --border-radius: 3vw;
+    --padding-m: 2vw;
+    --padding-l: 4vw;
+
+    --font-size-xl: 6vw;
+    --font-size-l: 4vw;
+    --font-size-m: 2.5vw;
+    --font-size-s: 1.5vw;
+}

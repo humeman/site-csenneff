@@ -1,0 +1,9 @@
+.vscode
+.data
+venv
+__pycache__
+node_modules
+package-lock.json
+.svelte-kit
+.env
+.env*

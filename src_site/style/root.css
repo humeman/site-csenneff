@@ -1,0 +1,31 @@
+html {
+    background-color: var(--background-1);
+    color: var(--primary-1);
+    margin: none;
+    padding: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: none;
+}
+
+/* HELPFUL CSS PROPERTIES */
+.nopadding { padding: 0; }
+.nomargins { margin: 0; }
+.margin-m { margin: var(--padding-m); }
+.margin-l { margin: var(--padding-l); }
+.pad-m { padding: var(--padding-m); }
+.pad-l { padding: var(--padding-l); }
+.block { display: block; }
+.flex-row { display: flex; flex-direction: row; align-items: center; }
+.flex-col { display: flex; flex-direction: column; align-items: center; }
+.center { align-self: center; }
+.center-text { text-align: center; }
+.primary-1 { color: var(--primary-1); }
+.primary-2 { color: var(--primary-2); }
+.primary-3 { color: var(--primary-3); }
+.flatten-emoji-primary-1 { color: transparent; text-shadow: 0 0 0 var(--primary-1); }
+.flatten-emoji-primary-2 { color: transparent; text-shadow: 0 0 0 var(--primary-2); }
+.flatten-emoji-primary-3 { color: transparent; text-shadow: 0 0 0 var(--primary-3); }

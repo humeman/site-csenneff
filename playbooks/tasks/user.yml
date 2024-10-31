@@ -1,0 +1,7 @@
+- name: Create user
+  ansible.builtin.user:
+    name: "{{ site_name }}"
+    password: "*"
+    create_home: true
+    system: true
+  become: true
