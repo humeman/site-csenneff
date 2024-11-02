@@ -1,0 +1,176 @@
+{
+    "school": [
+        {
+            "title": "Iowa State University",
+            "description": [
+                "Third-year student at ISU, majoring in Software Engineering and minoring in ",
+                "Cybersecurity Engineering. Broad coverage of software development practices ",
+                "and computer hardware, plus many individual and team design/programming projects. ",
+                "4.0 GPA, dean's list all years."
+            ],
+            "location": "Ames, IA",
+            "date": ["August 2022", "May 2026"],
+            "skills": {
+                "primary": [
+                    "software", "hardware", "cybersecurity"
+                ],
+                "hidden": [
+                    "web development", "hardware", "embedded systems", "java", "c", "javascript",
+                    "react", "assembly", "sql", "mongodb", "mysql", "neo4j", "backend", "frontend",
+                    "game development", "algorithms", "data", "linux", "system administration",
+                    "sysadmin", "microcontrollers", "ci/cd", "android", "networking",
+                    "api development", "js", "html", "css"
+                ]
+            },
+            "logo": "/misc/logo_isu.txt"
+        }
+    ],
+    "work": [
+        {
+            "title": "Hy-Vee IT",
+            "description": [
+                "Data Engineering intern at Hy-Vee's IT office, HST. ",
+                "Helping to build a new central cloud-based data platform. ",
+                "Deployed high-availability data movement software in Google Cloud ",
+                "and developed several serverless integrations with third-party data providers ",
+                "to reliably transfer data into BigQuery."
+            ],
+            "location": "Grimes, IA",
+            "date": ["May 2023", "Present"],
+            "skills": {
+                "primary": [
+                    "cloud", "java", "sql", "ci/cd", "networking",
+                    "system administration"
+                ],
+                "hidden": [
+                    "sysadmin", "google cloud", "serverless", "linux", "bash", "sql", "automation",
+                    "testing", "networking", "on prem", "team", "bigquery", "vm", "virtual machine",
+                    "concourse", "terraform", "github"
+                ]
+            },
+            "logo": "/misc/logo_hyvee.txt"
+        }
+    ],
+    "projects": [
+        {
+            "title": "deploy-vps",
+            "description": [
+                "A set of Ansible playbooks and GitHub Actions workflows which ",
+                "entirely automatically deploy and maintain my Linux servers in ",
+                "multiple environments. Includes automatic setup of ",
+                "SSH, user lists, backups, monitoring, a mail server, a game panel, ",
+                "and other services my projects make use of."
+            ],
+            "date": ["Jan 2024", "Present"],
+            "skills": {
+                "primary": [
+                    "ci/cd", "automation", "system administration"
+                ],
+                "hidden": [
+                    "ansible", "linux", "github actions", "mail", "web development",
+                    "bash", "monitoring", "dns", "ssl", "docker", "mongodb", "mysql",
+                    "nginx", "nodejs", "ssh", "sysadmin", "pterodactyl", "letsencrypt",
+                    "bind9", "dovecot", "postfix", "ssh", "github", "cybersecurity",
+                    "google cloud"
+                ]
+            },
+            "links": {
+                "see the source code": "https://github.com/humeman/deploy-vps"
+            }
+        },
+        {
+            "title": "Kill Bill 2",
+            "description": [
+                "Quite possibly my largest, most ambitious project. ",
+                "Built a video game from scratch in Java over 5 months ",
+                "for the ISU COMS 309 course. Cross platform (Android <-> Desktop), ",
+                "featuring an account system with secure authentication, a ",
+                "secured UDP game server for realtime gameplay, and fully ",
+                "custom graphics and UI rendering engine. Was also paired with ",
+                "an account manager webapp as an SE 319 project. > 50,000 LOC."
+            ],
+            "date": ["Jan 2024", "May 2024"],
+            "skills": {
+                "primary": [
+                    "java", "js", "express", "spring boot", "game development", "api development", "web development"
+                ],
+                "hidden": [
+                    "backend", "frontend", "bash", "full stack",
+                    "team", "automation", "ci/cd", "mysql", "sql", "react", "nodejs",
+                    "javascript", "cryptography", "rest api", "udp",
+                    "mobile", "android", "html", "css"
+                ]
+            },
+            "links": {
+                "watch the trailer": "https://youtu.be/fzo5a1VdlPs",
+                "see the source code": "https://github.com/humeman/killbill2"
+            }
+        },
+        {
+            "title": "tecktip.today",
+            "description": [
+                "A \"fun\" website which gives you a randomized, ",
+                "user-submitted tech tip from Linus Sebastian himself. ",
+                "Features its own secure API and an admin management panel. ",
+                "Deployed automagically using an Ansible playbook."
+            ],
+            "date": ["Jan 2022", "Present"],
+            "skills": {
+                "primary": [
+                    "python", "js", "svelte", "api development", "web development"
+                ],
+                "hidden": [
+                    "backend", "frontend", "python", "sveltekit", "api",
+                    "flask", "ssl", "letsencrypt", "github actions", "ci/cd",
+                    "ansible", "html", "css", "tailwind"
+                ]
+            },
+            "links": {
+                "check it out": "https://tecktip.today",
+                "see the source code": "https://github.com/humeman/site-tecktip"
+            }
+        },
+        {
+            "title": "this website :)",
+            "description": [
+                "My portfolio site. Made on a 24 hour time crunch using ",
+                "good ol' HTML, CSS, and JS - no external libraries involved. ",
+                "Deployed automagically using an Ansible playbook."
+            ],
+            "date": ["Oct 2024", "Present"],
+            "skills": {
+                "primary": [
+                    "js", "web development"
+                ],
+                "hidden": [
+                    "frontend", "html", "css", "js", "ansible", "ci/cd", "github actions",
+                    "letsencrypt", "ssl"
+                ]
+            },
+            "links": {
+                "see the source code": "https://github.com/humeman/site-csenneff"
+            }
+        },
+        {
+            "title": "very-alarming-pi",
+            "description": [
+                "A work-in-progress project to develop an overengineered ",
+                "Raspberry Pi based alarm clock with various <i>innovative</i> ",
+                "methods, such as massive speakers, flashing lights, vibrating ",
+                "bed shakers, and in-bed sensors."
+            ],
+            "date": ["Mar 2024", "Present"],
+            "skills": {
+                "primary": [
+                    "python", "embedded systems", "cad"
+                ],
+                "hidden": [
+                    "raspberry pi", "microcontrollers", "hardware", "linux"
+                ]
+            },
+            "links": {
+                "see the source code": "https://github.com/humeman/very-alarming-pi"
+            }
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+div.cols {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--padding-s)
+}
+
+@media (max-width: 400px) {
+    div.cols {
+        display: block;
+    }
+}
+
+.flex-col-2 { 
+    flex-grow: 0;
+    flex-basis: calc(50% - var(--padding-s));
+    min-width: 0;
+    word-wrap: break-word; 
+    align-self: stretch;
+}

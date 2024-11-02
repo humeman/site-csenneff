@@ -6,7 +6,6 @@ h1 {
     /* SIZE */
     font-size: var(--font-size-xl);
     letter-spacing: .4vw;
-    line-height: 50%;
 
     /* COLOR */
     color: var(--primary-1);
@@ -19,7 +18,6 @@ h2 {
     /* SIZE */
     font-size: var(--font-size-l);
     letter-spacing: .2vw;
-    line-height: 50%;
 
     /* COLOR */
     color: var(--primary-2);
@@ -32,7 +30,6 @@ h3 {
     /* SIZE */
     font-size: var(--font-size-m);
     letter-spacing: .15vw;
-    line-height: 50%;
 
     /* COLOR */
     color: var(--primary-3);
@@ -57,9 +54,13 @@ a.secret-link {
     text-decoration: none;
 }
 
+p {
+    margin-top: var(--padding-xs);
+    margin-bottom: var(--padding-xs);
+}
+
 /* LOGO */
 pre.logo {
-    display: block;
     font-size: 0.5vw;
     line-height: 0.65vw;
     color: var(--primary-1)

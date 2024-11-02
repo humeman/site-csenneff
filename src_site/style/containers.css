@@ -7,10 +7,7 @@ div.container1 {
     
     /* BACKGROUND */
     border-radius: var(--border-radius);
-    background-color: var(--background-2);
-
-    /* SPACING */
-    margin: var(--padding-m);
+    background-color: var(--background-3);
 }
 
 div.container2 {
@@ -20,11 +17,14 @@ div.container2 {
     
     /* BACKGROUND */
     border-radius: var(--border-radius);
-    background-color: var(--background-3);
+    background-color: var(--background-2);
+
 }
 
 /* COLOR OVERLAY */
 div.scanlines {
-    background-image: url("/img/bg-scanlines.png");
+    background-image: var(--scanlines-file);
     background-repeat: repeat;
+    border-radius: var(--border-radius);
+    height: 100%;
 }

@@ -14,18 +14,26 @@ body {
 /* HELPFUL CSS PROPERTIES */
 .nopadding { padding: 0; }
 .nomargins { margin: 0; }
+.margin-xs { margin: var(--padding-xs); }
+.margin-s { margin: var(--padding-s); }
 .margin-m { margin: var(--padding-m); }
 .margin-l { margin: var(--padding-l); }
 .pad-m { padding: var(--padding-m); }
 .pad-l { padding: var(--padding-l); }
 .block { display: block; }
-.flex-row { display: flex; flex-direction: row; align-items: center; }
-.flex-col { display: flex; flex-direction: column; align-items: center; }
+.flex-row { display: flex; flex-direction: row; }
+.flex-col { display: flex; flex-direction: column;}
+.flex-center { align-items: center; justify-content: center; }
+.flex-wrap { flex-wrap: wrap; }
 .center { align-self: center; }
 .center-text { text-align: center; }
+.bottom { margin-top: auto; }
 .primary-1 { color: var(--primary-1); }
 .primary-2 { color: var(--primary-2); }
 .primary-3 { color: var(--primary-3); }
+.bg-primary-1 { background-color: var(--primary-1) !important; }
+.bg-primary-2 { background-color: var(--primary-2) !important; }
+.bg-primary-3 { background-color: var(--primary-3) !important; }
 .flatten-emoji-primary-1 { color: transparent; text-shadow: 0 0 0 var(--primary-1); }
 .flatten-emoji-primary-2 { color: transparent; text-shadow: 0 0 0 var(--primary-2); }
 .flatten-emoji-primary-3 { color: transparent; text-shadow: 0 0 0 var(--primary-3); }

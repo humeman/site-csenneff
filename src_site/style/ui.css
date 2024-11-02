@@ -1,0 +1,59 @@
+input {
+    background-color: var(--background-3);
+    color: var(--primary-3);
+    
+    font: var(--font-title);
+    font-size: var(--font-size-m);
+
+    padding: var(--padding-s);
+    margin: var(--padding-m);
+
+    border-radius: var(--border-radius);
+    border-color: var(--primary-3);
+
+    text-align: center;
+}
+
+button.mini {
+    background-color: var(--primary-3);
+    color: var(--background-1);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--padding-xs) var(--padding-s);
+    
+    font: var(--font-paragraph);
+    font-size: var(--font-size-s);
+}
+
+button.mini:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button {
+    background-color: var(--primary-1);
+    color: var(--background-1);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--padding-s) var(--padding-m);
+    
+    font: var(--font-paragraph);
+    font-size: var(--font-size-m);
+}
+
+a.fake-button-mini {
+    background-color: var(--primary-3);
+    color: var(--background-1);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--padding-xs) var(--padding-s);
+    text-decoration: none;
+    
+    font: var(--font-paragraph);
+    font-size: var(--font-size-s);
+}
+
+a.fake-button-mini:hover {
+    cursor: pointer;
+    font-weight: 600;
+}
