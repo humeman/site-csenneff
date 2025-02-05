@@ -12,7 +12,7 @@ env:
   IS_CI: "1"
   SCRIPT_PATH: "main/ci/scripts"
   REPO_PATH: "pr"
-  REPO_NAME: "site-tecktip"
+  REPO_NAME: "site-csenneff"
 
 jobs:
   build:

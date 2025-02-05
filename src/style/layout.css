@@ -4,12 +4,16 @@ div.cols {
     justify-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: var(--padding-s)
+    gap: var(--padding-s);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1000px) {
     div.cols {
         display: block;
+    }
+
+    .flex-col-2 {
+        margin: var(--padding-s);
     }
 }
 

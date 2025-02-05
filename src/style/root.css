@@ -3,12 +3,35 @@ html {
     color: var(--primary-1);
     margin: none;
     padding: none;
+    width: 100%;
+    justify-content: center;
 }
 
 body {
     display: flex;
     flex-direction: column;
     gap: none;
+    justify-self: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+@media (max-width: 1800px) {
+    body {
+        width: 75%;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    div.cols {
+        display: block;
+        justify-content: center;
+    }
+
+    body {
+        width: 100%;
+    }
 }
 
 /* HELPFUL CSS PROPERTIES */

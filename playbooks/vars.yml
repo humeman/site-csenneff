@@ -1,9 +1,2 @@
-site_name: site-tecktip
-git_repo: github.com/humeman/site-tecktip
-node_version: "21"
-
-dependency_versions:
-  dev:
-    python: "3.11"
-  prod:
-    python: "3.12"
+site_name: site-csenneff
+git_repo: github.com/humeman/site-csenneff

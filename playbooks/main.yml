@@ -5,20 +5,5 @@
     - name: Create user
       include_tasks: tasks/user.yml
 
-    - name: Install dependencies
-      include_tasks: tasks/dependencies.yml
-
-    - name: Deploy scripts
-      include_tasks: tasks/scripts.yml
-
     - name: Set up Nginx
       include_tasks: tasks/nginx.yml
-      
-    - name: Set up firewall rules
-      include_tasks: tasks/firewall.yml
-
-    - name: Set up systemd service
-      include_tasks: tasks/systemd.yml
-      
-    - name: Deploy new version
-      include_tasks: tasks/deploy.yml

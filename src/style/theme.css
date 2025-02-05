@@ -32,8 +32,44 @@
     --padding-m: 2vw;
     --padding-l: 4vw;
 
-    --font-size-xl: 6vw;
+    --font-size-xl: 4vw;
     --font-size-l: 4vw;
     --font-size-m: 2.5vw;
     --font-size-s: 1.5vw;
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --font-title: 5vw "Workbench", monospace;
+        --font-paragraph: 2vw "DM Mono", monospace;
+
+        --border-radius: 4vw;
+        --padding-xs: 1vw;
+        --padding-s: 2vw;
+        --padding-m: 4vw;
+        --padding-l: 6vw;
+
+        --font-size-xl: 6vw;
+        --font-size-l: 5vw;
+        --font-size-m: 3.5vw;
+        --font-size-s: 2.5vw;
+    }
+}
+
+@media (min-width: 1800px) {
+    :root {
+        --font-title: 3vw "Workbench", monospace;
+        --font-paragraph: 1vw "DM Mono", monospace;
+
+        --border-radius: 3vw;
+        --padding-xs: 0.5vw;
+        --padding-s: 1vw;
+        --padding-m: 2vw;
+        --padding-l: 3vw;
+
+        --font-size-xl: 3vw;
+        --font-size-l: 2.5vw;
+        --font-size-m: 1.75vw;
+        --font-size-s: 1vw;
+    }
 }

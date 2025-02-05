@@ -7,7 +7,7 @@ tasks:
       IS_CI: 0
       SCRIPT_PATH: "ci/scripts"
       REPO_PATH: "."
-      REPO_NAME: site-tecktip
+      REPO_NAME: site-csenneff
     cmds:
       - bash ci/scripts/task-verify.sh
       - defer: bash ci/scripts/clean.sh
@@ -19,7 +19,7 @@ tasks:
       IS_CI: 0
       SCRIPT_PATH: "ci/scripts"
       REPO_PATH: "."
-      REPO_NAME: site-tecktip
+      REPO_NAME: site-csenneff
     cmds:
       - bash ci/scripts/task-verify.sh
       - defer: bash ci/scripts/clean.sh

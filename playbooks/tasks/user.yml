@@ -5,3 +5,10 @@
     create_home: true
     system: true
   become: true
+
+- name: Add {{ ansible_user_id }} to {{ site_name }} group
+  ansible.builtin.user:
+    name: "{{ ansible_user_id }}"
+    groups: "{{ site_name }}"
+    append: yes
+  become: true

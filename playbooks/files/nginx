@@ -1,16 +1,10 @@
-upstream sveltekit-{{ site_name }} {
-  server 127.0.0.1:{{ svelte_port }};
-  keepalive 8;
-}
-
 server {
   listen 443 ssl http2;
   listen [::]:443 ssl http2;
   server_name {{ site_host }};
 
-  root /var/www/{{ site_name }}/err;
+  root /var/www/{{ site_name }};
 
-  # SSL Configuration - Replace the example <domain> with your domain
   ssl_certificate /etc/letsencrypt/live/{{ site_host }}/fullchain.pem;
   ssl_certificate_key /etc/letsencrypt/live/{{ site_host }}/privkey.pem;
   ssl_session_cache shared:SSL:10m;
@@ -18,8 +12,6 @@ server {
   ssl_ciphers "ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384";
   ssl_prefer_server_ciphers on;
 
-  # See https://hstspreload.org/ before uncommenting the line below.
-  # add_header Strict-Transport-Security "max-age=15768000; preload;";
   add_header X-Content-Type-Options nosniff;
   add_header X-XSS-Protection "1; mode=block";
   add_header X-Robots-Tag none;
@@ -28,20 +20,16 @@ server {
   add_header Referrer-Policy same-origin;
 
   location / {
-    proxy_set_header X-Real-IP $remote_addr;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-NginX-Proxy true;
-    proxy_set_header X-Forwarded-Proto $scheme;
-
-    proxy_pass http://sveltekit-{{ site_name }};
-    proxy_redirect off;
-
-    error_page 502 = @static;
   }
+}
 
-  location @static {
-    try_files /index.html =404;
-  }
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name {{ site_host }};
+
+    return 301 https://{{ site_host }}$request_uri;
 }
 
 {% for domain in aliases %}
@@ -57,12 +45,3 @@ server {
     return 301 https://{{ site_host }}$request_uri;
 }
 {% endfor %}
-
-server {
-    listen 80;
-    listen [::]:80;
-
-    server_name {{ site_host }} {{ aliases | join(" ") }};
-
-    return 301 https://{{ site_host }}$request_uri;
-}

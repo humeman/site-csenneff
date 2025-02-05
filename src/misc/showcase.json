@@ -6,7 +6,7 @@
                 "Third-year student at ISU, majoring in Software Engineering and minoring in ",
                 "Cybersecurity Engineering. Broad coverage of software development practices ",
                 "and computer hardware, plus many individual and team design/programming projects. ",
-                "4.0 GPA, dean's list all years."
+                "3.99 GPA, dean's list all years."
             ],
             "location": "Ames, IA",
             "date": ["August 2022", "May 2026"],
@@ -15,11 +15,11 @@
                     "software", "hardware", "cybersecurity"
                 ],
                 "hidden": [
-                    "web development", "hardware", "embedded systems", "java", "c", "javascript",
+                    "web dev", "hardware", "embedded systems", "java", "c", "javascript",
                     "react", "assembly", "sql", "mongodb", "mysql", "neo4j", "backend", "frontend",
-                    "game development", "algorithms", "data", "linux", "system administration",
+                    "game dev", "algorithms", "data", "linux", "system administration",
                     "sysadmin", "microcontrollers", "ci/cd", "android", "networking",
-                    "api development", "js", "html", "css"
+                    "api dev", "js", "html", "css", "c++", "cpp"
                 ]
             },
             "logo": "/misc/logo_isu.txt"
@@ -67,7 +67,7 @@
                     "ci/cd", "automation", "system administration"
                 ],
                 "hidden": [
-                    "ansible", "linux", "github actions", "mail", "web development",
+                    "ansible", "linux", "github actions", "mail", "web dev",
                     "bash", "monitoring", "dns", "ssl", "docker", "mongodb", "mysql",
                     "nginx", "nodejs", "ssh", "sysadmin", "pterodactyl", "letsencrypt",
                     "bind9", "dovecot", "postfix", "ssh", "github", "cybersecurity",
@@ -92,7 +92,7 @@
             "date": ["Jan 2024", "May 2024"],
             "skills": {
                 "primary": [
-                    "java", "js", "express", "spring boot", "game development", "api development", "web development"
+                    "java", "js", "express", "spring boot", "game dev", "api dev", "web dev"
                 ],
                 "hidden": [
                     "backend", "frontend", "bash", "full stack",
@@ -117,7 +117,7 @@
             "date": ["Jan 2022", "Present"],
             "skills": {
                 "primary": [
-                    "python", "js", "svelte", "api development", "web development"
+                    "python", "js", "svelte", "api dev", "web dev"
                 ],
                 "hidden": [
                     "backend", "frontend", "python", "sveltekit", "api",
@@ -133,14 +133,14 @@
         {
             "title": "this website :)",
             "description": [
-                "My portfolio site. Made on a 24 hour time crunch using ",
+                "My portfolio site. Made (mostly) on a 24 hour time crunch using ",
                 "good ol' HTML, CSS, and JS - no external libraries involved. ",
                 "Deployed automagically using an Ansible playbook."
             ],
             "date": ["Oct 2024", "Present"],
             "skills": {
                 "primary": [
-                    "js", "web development"
+                    "js", "web dev"
                 ],
                 "hidden": [
                     "frontend", "html", "css", "js", "ansible", "ci/cd", "github actions",
@@ -155,9 +155,9 @@
             "title": "very-alarming-pi",
             "description": [
                 "A work-in-progress project to develop an overengineered ",
-                "Raspberry Pi based alarm clock with various <i>innovative</i> ",
-                "methods, such as massive speakers, flashing lights, vibrating ",
-                "bed shakers, and in-bed sensors."
+                "Raspberry Pi based alarm clock completely from scratch ",
+                "with various <i>innovative</i> methods, such as massive ",
+                "speakers, flashing lights, vibrating bed shakers, and in-bed sensors."
             ],
             "date": ["Mar 2024", "Present"],
             "skills": {
@@ -170,6 +170,29 @@
             },
             "links": {
                 "see the source code": "https://github.com/humeman/very-alarming-pi"
+            }
+        },
+        {
+            "title": "humecord",
+            "description": [
+                "My first large-scale programming project, started in 2020. ",
+                "An in-depth Discord bot framework, complete with an API, remote monitoring, ",
+                "and detailed documentation. Used to create various fun bots to use within ",
+                "Discord, including one to play music from YouTube, one that enabled playing ",
+                "on a Minecraft server from a Discord channel, a remote server monitoring and ",
+                "alerting bot, and quite a bit more. "
+            ],
+            "date": ["2020", "2022"],
+            "skills": {
+                "primary": [
+                    "python", "api dev"
+                ],
+                "hidden": [
+                    "mongodb", "backend", "flask"
+                ]
+            },
+            "links": {
+                "see the source code": "https://github.com/humeman/humecord"
             }
         }
     ]
