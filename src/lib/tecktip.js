@@ -1,4 +1,4 @@
-const TECKTIP_URL = "https://tecktip.today:8325"
+const TECKTIP_URL = "https://tecktip.today:8325/nice"
 
 /**
  * Gets a teck tip and writes it to the element's text content.
