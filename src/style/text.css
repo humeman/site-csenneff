@@ -5,7 +5,7 @@ h1 {
 
     /* SIZE */
     font-size: var(--font-size-xl);
-    letter-spacing: .4vw;
+    letter-spacing: 6px;
 
     /* COLOR */
     color: var(--primary-1);
@@ -17,7 +17,7 @@ h2 {
 
     /* SIZE */
     font-size: var(--font-size-l);
-    letter-spacing: .2vw;
+    letter-spacing: 4px;
 
     /* COLOR */
     color: var(--primary-2);
@@ -29,7 +29,7 @@ h3 {
 
     /* SIZE */
     font-size: var(--font-size-m);
-    letter-spacing: .15vw;
+    letter-spacing: 3px;
 
     /* COLOR */
     color: var(--primary-3);
@@ -61,8 +61,8 @@ p {
 
 /* LOGO */
 pre.logo {
-    font-size: 0.25vw;
-    line-height: 0.29vw;
+    font-size: var(--logo-size);
+    line-height: var(--logo-height);
     color: var(--primary-1);
     margin-left: var(--padding-m);
     margin-right: var(--padding-m);

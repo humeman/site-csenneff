@@ -53,6 +53,35 @@
     ],
     "projects": [
         {
+            "title": "Kill Bill 2",
+            "description": [
+                "My largest, most ambitious project. ",
+                "Built a video game from scratch in Java over 5 months ",
+                "for the ISU COMS 309 course. Cross platform (Android <-> Desktop), ",
+                "featuring an account system with secure authentication, a ",
+                "secured UDP game server for realtime gameplay, and fully ",
+                "custom graphics and UI rendering engine. Was also paired with ",
+                "an account manager webapp as an SE 319 project. Received ",
+                "Best Project Award out of ~70 projects."
+            ],
+            "date": ["Jan 2024", "May 2024"],
+            "skills": {
+                "primary": [
+                    "java", "js", "express", "spring boot", "game dev", "api dev", "web dev"
+                ],
+                "hidden": [
+                    "backend", "frontend", "bash", "full stack",
+                    "team", "automation", "ci/cd", "mysql", "sql", "react", "nodejs",
+                    "javascript", "cryptography", "rest api", "udp",
+                    "mobile", "android", "html", "css"
+                ]
+            },
+            "links": {
+                "watch the trailer": "https://youtu.be/fzo5a1VdlPs",
+                "see the source code": "https://github.com/humeman/killbill2"
+            }
+        },
+        {
             "title": "deploy-vps",
             "description": [
                 "A set of Ansible playbooks and GitHub Actions workflows which ",
@@ -76,34 +105,6 @@
             },
             "links": {
                 "see the source code": "https://github.com/humeman/deploy-vps"
-            }
-        },
-        {
-            "title": "Kill Bill 2",
-            "description": [
-                "Quite possibly my largest, most ambitious project. ",
-                "Built a video game from scratch in Java over 5 months ",
-                "for the ISU COMS 309 course. Cross platform (Android <-> Desktop), ",
-                "featuring an account system with secure authentication, a ",
-                "secured UDP game server for realtime gameplay, and fully ",
-                "custom graphics and UI rendering engine. Was also paired with ",
-                "an account manager webapp as an SE 319 project. > 50,000 LOC."
-            ],
-            "date": ["Jan 2024", "May 2024"],
-            "skills": {
-                "primary": [
-                    "java", "js", "express", "spring boot", "game dev", "api dev", "web dev"
-                ],
-                "hidden": [
-                    "backend", "frontend", "bash", "full stack",
-                    "team", "automation", "ci/cd", "mysql", "sql", "react", "nodejs",
-                    "javascript", "cryptography", "rest api", "udp",
-                    "mobile", "android", "html", "css"
-                ]
-            },
-            "links": {
-                "watch the trailer": "https://youtu.be/fzo5a1VdlPs",
-                "see the source code": "https://github.com/humeman/killbill2"
             }
         },
         {
@@ -131,6 +132,27 @@
             }
         },
         {
+            "title": "very-alarming-pi",
+            "description": [
+                "A work-in-progress project to develop an advanced ",
+                "Raspberry Pi based alarm clock completely from scratch ",
+                "with various <i>innovative</i> awakening methods, such as massive ",
+                "speakers, flashing lights, vibrating bed shakers, and in-bed sensors."
+            ],
+            "date": ["Mar 2024", "Present"],
+            "skills": {
+                "primary": [
+                    "python", "embedded systems", "cad"
+                ],
+                "hidden": [
+                    "raspberry pi", "microcontrollers", "hardware", "linux"
+                ]
+            },
+            "links": {
+                "see the source code": "https://github.com/humeman/very-alarming-pi"
+            }
+        },
+        {
             "title": "this website :)",
             "description": [
                 "My portfolio site. Made (mostly) on a 24 hour time crunch using ",
@@ -149,28 +171,8 @@
             },
             "links": {
                 "see the source code": "https://github.com/humeman/site-csenneff"
-            }
-        },
-        {
-            "title": "very-alarming-pi",
-            "description": [
-                "A work-in-progress project to develop an overengineered ",
-                "Raspberry Pi based alarm clock completely from scratch ",
-                "with various <i>innovative</i> methods, such as massive ",
-                "speakers, flashing lights, vibrating bed shakers, and in-bed sensors."
-            ],
-            "date": ["Mar 2024", "Present"],
-            "skills": {
-                "primary": [
-                    "python", "embedded systems", "cad"
-                ],
-                "hidden": [
-                    "raspberry pi", "microcontrollers", "hardware", "linux"
-                ]
             },
-            "links": {
-                "see the source code": "https://github.com/humeman/very-alarming-pi"
-            }
+            "hide": true
         },
         {
             "title": "humecord",
@@ -182,7 +184,7 @@
                 "on a Minecraft server from a Discord channel, a remote server monitoring and ",
                 "alerting bot, and quite a bit more. "
             ],
-            "date": ["2020", "2022"],
+            "date": ["May 2020", "Jan 2023"],
             "skills": {
                 "primary": [
                     "python", "api dev"
@@ -193,6 +195,28 @@
             },
             "links": {
                 "see the source code": "https://github.com/humeman/humecord"
+            }
+        },
+        {
+            "title": "RC Pi",
+            "description": [
+                "One of my earlier large-scale projects. Developed a remote-controlled RC car ",
+                "controlled entirely via a custom phone app over a websocket and HTTP API. ",
+                "Included a live-streamed video feed and a custom 3D-printed car running ",
+                "a server on a Raspberry Pi and controlling motors over GPIO."
+            ],
+            "date": ["May 2021", "Jun 2021"],
+            "skills": {
+                "primary": [
+                    "python", "api dev", "hardware"
+                ],
+                "hidden": [
+                    "flask", "backend", "raspberry pi", "cad", "kivy"
+                ]
+            },
+            "links": {
+                "see the source code (app)": "https://github.com/humeman/rc-pi",
+                "see the source code (server)": "https://github.com/humeman/rcpi-app"
             }
         }
     ]
