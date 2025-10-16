@@ -3,7 +3,7 @@
         {
             "title": "Iowa State University",
             "description": [
-                "Third-year student at ISU, majoring in Software Engineering and minoring in ",
+                "Fourth-year student at ISU, majoring in Software Engineering and minoring in ",
                 "Cybersecurity Engineering. Broad coverage of software development practices ",
                 "and computer hardware, plus many individual and team design/programming projects. ",
                 "3.99 GPA, dean's list all years."
@@ -29,7 +29,7 @@
         {
             "title": "Hy-Vee IT",
             "description": [
-                "Data Engineering intern at Hy-Vee's IT office, HST. ",
+                "Data Engineering intern and future full-time Software Engineer at Hy-Vee's IT office, HST. ",
                 "Helping to build a new central cloud-based data platform. ",
                 "Deployed high-availability data movement software in Google Cloud ",
                 "and developed several serverless integrations with third-party data providers ",
@@ -39,7 +39,7 @@
             "date": ["May 2023", "Present"],
             "skills": {
                 "primary": [
-                    "cloud", "java", "sql", "ci/cd", "networking",
+                    "cloud", "java", "go", "python", "sql", "ci/cd",
                     "system administration"
                 ],
                 "hidden": [
@@ -151,28 +151,6 @@
             "links": {
                 "see the source code": "https://github.com/humeman/very-alarming-pi"
             }
-        },
-        {
-            "title": "this website :)",
-            "description": [
-                "My portfolio site. Made (mostly) on a 24 hour time crunch using ",
-                "good ol' HTML, CSS, and JS - no external libraries involved. ",
-                "Deployed automagically using an Ansible playbook."
-            ],
-            "date": ["Oct 2024", "Present"],
-            "skills": {
-                "primary": [
-                    "js", "web dev"
-                ],
-                "hidden": [
-                    "frontend", "html", "css", "js", "ansible", "ci/cd", "github actions",
-                    "letsencrypt", "ssl"
-                ]
-            },
-            "links": {
-                "see the source code": "https://github.com/humeman/site-csenneff"
-            },
-            "hide": true
         },
         {
             "title": "humecord",
